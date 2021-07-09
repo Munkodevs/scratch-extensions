@@ -44,7 +44,7 @@ class Base64 {
 
   decodeBase64({DECODEVAL}) {
     return btoa(DECODEVAL);
-  }
+  },
 
   encodeBase64({ENCODEVAL}) {
     return atob(ENCODEVAL);
