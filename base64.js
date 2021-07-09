@@ -19,9 +19,9 @@ class Base64 {
         {
           opcode: 'decodeBase64',
 
-          blockType: Scratch.BlockType.REPORTER,
+          blockType: Scratch.BlockType.BOOLEAN,
 
-          text: 'decode from base64 [DECODEVAL]',
+          text: 'decode [DECODEVAL] from base64',
           arguments: {
             URL: {
               type: Scratch.ArgumentType.STRING,
@@ -34,7 +34,7 @@ class Base64 {
 
           blockType: Scratch.BlockType.BOOLEAN,
 
-          text: 'encode from base64 [ENCODEVAL]',
+          text: 'encode [ENCODEVAL] from base64',
           arguments: {
             URL: {
               type: Scratch.ArgumentType.STRING,
