@@ -43,11 +43,11 @@ class Base64 {
   }
 
   decodeBase64({DECODEVAL}) {
-    return btoa(DECODEVAL);
-  },
+    return atob(DECODEVAL);
+  }
 
   encodeBase64({ENCODEVAL}) {
-    return atob(ENCODEVAL);
+    return btoa(ENCODEVAL);
   }
 
 }
