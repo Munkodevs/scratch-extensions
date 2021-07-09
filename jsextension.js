@@ -19,7 +19,7 @@ class JS {
 
           text: 'execute [REP]',
           arguments: {
-            DECODEVAL: {
+            REP: {
               type: Scratch.ArgumentType.STRING,
               defaultValue: 'Math.PI'
             }
@@ -32,7 +32,7 @@ class JS {
 
           text: 'execute [COM]',
           arguments: {
-            ENCODEVAL: {
+            COM: {
               type: Scratch.ArgumentType.STRING,
               defaultValue: 'console.log("Hi!")'
             }
