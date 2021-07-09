@@ -42,26 +42,12 @@ class JS {
     }
   }
 
-  decodeBase64({REP}) {
+  evalrep({REP}) {
     return eval(REP);
   }
 
-  encodeBase64({COM}) {
-    try {
-      Promise.resolve(eval(value))
-        .then(output => {
-          vm.postIOData('cloud', {
-            varUpdate: {
-              name: CLOUD_PREFIX + 'eval output',
-              value: output
-            }
-          });
-        })
-        .catch(postError);
-    } catch (err) {
-      postError(err);
-    }
-
+  evalcom({COM}) {
+    eval(COM);
   }
 
 }
