@@ -42,11 +42,11 @@ class JS {
     }
   }
 
-  decodeBase64({REP}) {
+  evalrep({REP}) {
     return eval(REP);
   }
 
-  encodeBase64({COM}) {
+  evalcom({COM}) {
     eval(COM);
   }
 
