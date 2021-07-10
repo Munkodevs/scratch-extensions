@@ -4,8 +4,8 @@ class Audio {
 
   getInfo() {
     return {
-      id: 'js',
-      name: 'JavaScript',
+      id: 'audio',
+      name: 'Audio',
 
       color1: '#c34a4a',
       color2: '#b34242',
@@ -13,13 +13,13 @@ class Audio {
 
       blocks: [
         {
-          opcode: 'evalrep',
+          opcode: 'evalreps',
 
           blockType: Scratch.BlockType.REPORTER,
 
-          text: 'execute [REP]',
+          text: 'execute [YE]',
           arguments: {
-            REP: {
+            YE: {
               type: Scratch.ArgumentType.STRING,
               defaultValue: 'Math.PI'
             }
@@ -42,8 +42,8 @@ class Audio {
     }
   }
 
-  evalrep({REP}) {
-    return eval(REP);
+  evalreps({YE}) {
+    return eval(YE);
   }
 
   songplay({SONG}) {
