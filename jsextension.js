@@ -1,40 +1,24 @@
-class JS {
-
-  constructor() {}
-
-  getInfo() {
+class EvalExtension {
+  getInfo () {
     return {
-      id: 'js',
+      id: 'eval',
       name: 'JavaScript',
 
-      color1: '#c34a4a',
-      color2: '#b34242',
-      color3: '#9f3838',
+      color1: '#f44336',
+      color2: '#e53935',
+      color3: '#d32f2f',
 
       blocks: [
         {
-          opcode: 'evalrep',
+          opcode: 'eval',
 
           blockType: Scratch.BlockType.REPORTER,
 
-          text: 'execute [REP]',
+          text: 'run JavaScript [CODE]',
           arguments: {
-            REP: {
+            CODE: {
               type: Scratch.ArgumentType.STRING,
-              defaultValue: 'Math.PI'
-            }
-          }
-        },
-        {
-          opcode: 'evalcom',
-
-          blockType: Scratch.BlockType.COMMAND,
-
-          text: 'execute [COM]',
-          arguments: {
-            COM: {
-              type: Scratch.ArgumentType.STRING,
-              defaultValue: 'console.log("Hi!")'
+              defaultValue: 'Array.from({ length: 100 }, (_, i) => BigInt(i) + 1n).reduce((a, b) => a * b).toString()'
             }
           }
         }
@@ -42,14 +26,9 @@ class JS {
     }
   }
 
-  evalrep({REP}) {
-    return eval(REP);
+  eval ({ CODE }) {
+    eval(CODE)
   }
-
-  evalcom({COM}) {
-    eval(COM);
-  }
-
 }
 
-Scratch.extensions.register(new JS());
+Scratch.extensions.register(new EvalExtension());
