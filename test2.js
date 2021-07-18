@@ -198,6 +198,19 @@ class Utilities {
           }
         },
         {
+          opcode: 'removeStart',
+
+          blockType: Scratch.BlockType.REPORTER,
+
+          text: 'remove first character from [STRING]',
+          arguments: {
+            STRING: {
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: 'dcba'
+            }
+          }
+        },
+        {
           opcode: 'regexReplace',
 
           blockType: Scratch.BlockType.REPORTER,
@@ -294,6 +307,10 @@ class Utilities {
 
   removeLast({STRING}) { 
     return STRING.slice(0, -1);
+  }
+
+  removeStart({STRING}) { 
+    return STRING.substring(1);
   }
 
   regexReplace({STRING, REGEX, NEWSTRING}) {
