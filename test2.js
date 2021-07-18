@@ -185,6 +185,19 @@ class Utilities {
           }
         },
         {
+          opcode: 'removeLast',
+
+          blockType: Scratch.BlockType.REPORTER,
+
+          text: '[STRING]',
+          arguments: {
+            STRING: {
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: 'abcd'
+            }
+          }
+        },
+        {
           opcode: 'regexReplace',
 
           blockType: Scratch.BlockType.REPORTER,
@@ -277,6 +290,10 @@ class Utilities {
 
   stringToBoolean({STRING}) {
     return STRING;
+  }
+
+  removeLast({STRING}) { 
+    return str.slice(0, -1);
   }
 
   regexReplace({STRING, REGEX, NEWSTRING}) {
