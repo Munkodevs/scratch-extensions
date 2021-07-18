@@ -189,7 +189,7 @@ class Utilities {
 
           blockType: Scratch.BlockType.REPORTER,
 
-          text: '[STRING]',
+          text: 'remove last character from [STRING]',
           arguments: {
             STRING: {
               type: Scratch.ArgumentType.STRING,
@@ -293,7 +293,7 @@ class Utilities {
   }
 
   removeLast({STRING}) { 
-    return str.slice(0, -1);
+    return STRING.slice(0, -1);
   }
 
   regexReplace({STRING, REGEX, NEWSTRING}) {
